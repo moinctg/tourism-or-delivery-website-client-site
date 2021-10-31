@@ -1,5 +1,7 @@
 
 import React from 'react';
+import Banner from '../Banner/Banner';
+import Services from '../Services/Services';
 import Background from '../../../images/gallery/quote.png';
 const Home = () => {
     const style= {
@@ -11,8 +13,10 @@ const Home = () => {
         marginTop:'-45px'
     }
     return (
-        <div>
-          
+        <div id="home">
+
+          <Banner></Banner>
+          <Services></Services>
 
      
       <section class="pt-7 pb-0">

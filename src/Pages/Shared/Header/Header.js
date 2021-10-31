@@ -28,7 +28,7 @@ const Header = () => {
               <li className="nav-item px-2"><Link as={HashLink} className="nav-link" aria-current="page" to="/home#home">Home</Link></li>
               <li className="nav-item px-2"><Link className="nav-link" to="/home#services">Our Services</Link></li>
               <li className="nav-item px-2"><Link className="nav-link" to="/about">About us </Link></li>
-              <li className="nav-item px-2"><Link  className="nav-link" to="/contact">Contact</Link></li>
+              <li className="nav-item px-2"><Link  className="nav-link" to="/home#contact">Contact</Link></li>
               <li className="nav-item px-2"><Link  className="nav-link"  to="">Register</Link></li>
              {user?.email?
               <button onClick={logOut} className="btn btn-warning ">Logout</button>:

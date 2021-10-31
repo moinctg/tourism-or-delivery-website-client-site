@@ -3,7 +3,8 @@ import {
   Switch,
   Route,
   
-} from "react-router-dom";
+}
+ from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
@@ -14,6 +15,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 import AddService from "./Pages/AddService/AddService";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Booking from "./Pages/Booking/Booking";
+import Contact from "./Pages/Home/Contact/Contact";
+import Dashboard from "./Pages/AdminPanel/Dashboard/Deshboard";
 
 function App() {
   return (
@@ -35,11 +38,17 @@ function App() {
           <Route path='/banner'>
           <Banner></Banner>
           </Route>
+          <Route path='/contact'>
+          <Contact></Contact>
+          </Route>
           <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
-          <PrivateRoute path="/booking/:serviceId">
+          <PrivateRoute path="addServices">
           <AddService></AddService>
+            </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+          <Dashboard></Dashboard>
             </PrivateRoute>
           <Route path='/login'>
             <Login></Login>

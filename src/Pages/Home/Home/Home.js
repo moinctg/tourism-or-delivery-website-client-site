@@ -2,6 +2,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
+import Contact from '../Contact/Contact';
 import Background from '../../../images/gallery/quote.png';
 const Home = () => {
     const style= {
@@ -17,6 +18,7 @@ const Home = () => {
 
           <Banner></Banner>
           <Services></Services>
+          <Contact></Contact>
 
      
       <section class="pt-7 pb-0">

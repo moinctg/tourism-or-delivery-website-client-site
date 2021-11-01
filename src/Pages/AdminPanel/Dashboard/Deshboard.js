@@ -52,7 +52,7 @@ const Deshboard = () => {
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
                     <Link  class="collapse-item" to="/addServices">Add Service</Link>
-                    <Link class="collapse-item" href="#">Manage Services</Link>
+                    <Link class="collapse-item" to="/manageService">Manage Services</Link>
                     <Link class="collapse-item" href="#">Show Order</Link>
                     <div class="collapse-divider"></div>
                    

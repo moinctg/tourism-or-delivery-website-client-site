@@ -17,7 +17,7 @@ const Booking = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://fierce-reaches-68927.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -27,7 +27,7 @@ const Booking = () => {
         }
     
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://fierce-reaches-68927.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

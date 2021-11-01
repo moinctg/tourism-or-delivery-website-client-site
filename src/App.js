@@ -18,6 +18,7 @@ import Booking from "./Pages/Booking/Booking";
 import Contact from "./Pages/Home/Contact/Contact";
 import Dashboard from "./Pages/AdminPanel/Dashboard/Deshboard";
 import ManageServices from "./Pages/AdminPanel/ManageService/ManageSevice";
+import About from "./Pages/Home/About/About";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path='/banner'>
           <Banner></Banner>
+          </Route>
+          <Route path='/about'>
+          <About></About>
           </Route>
           <Route path='/contact'>
           <Contact></Contact>

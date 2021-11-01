@@ -12,11 +12,12 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Login from "./Pages/Login/Login/Login";
 import Banner from "./Pages/Home/Banner/Banner";
 import NotFound from "./Pages/NotFound/NotFound";
-import AddService from "./Pages/AddService/AddService";
+import AddService from "./Pages/AdminPanel/AddService/AddService";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Booking from "./Pages/Booking/Booking";
 import Contact from "./Pages/Home/Contact/Contact";
 import Dashboard from "./Pages/AdminPanel/Dashboard/Deshboard";
+import ManageServices from "./Pages/AdminPanel/ManageService/ManageSevice";
 
 function App() {
   return (
@@ -44,11 +45,14 @@ function App() {
           <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
-          <PrivateRoute path="addServices">
-          <AddService></AddService>
-            </PrivateRoute>
           <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/addServices">
+          <AddService></AddService>
+            </PrivateRoute>
+            <PrivateRoute path="/manageService">
+          <ManageServices></ManageServices>
             </PrivateRoute>
           <Route path='/login'>
             <Login></Login>

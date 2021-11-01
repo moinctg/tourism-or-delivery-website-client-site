@@ -29,11 +29,12 @@ const Header = () => {
               <li className="nav-item px-2"><Link className="nav-link" to="/home#services">Our Services</Link></li>
               <li className="nav-item px-2"><Link className="nav-link" to="/about">About us </Link></li>
               <li className="nav-item px-2"><Link  className="nav-link" to="/home#contact">Contact</Link></li>
-              <li className="nav-item px-2"><Link  className="nav-link"  to="">Register</Link></li>
+              {/* <li className="nav-item px-2"><Link  className="nav-link"  to="">Register</Link></li> */}
              {user?.email?
               <button onClick={logOut} className="btn btn-warning ">Logout</button>:
               <Link className="btn btn-primary order-1 order-lg-0 ms-lg-3" to="/login">Login</Link>}
               Signed in as: <Link className=" btn btn-secondary " to="/login">{user?.displayName}</Link>
+            <li className="nav-item px-2"><Link  className="nav-link"  to="/dashboard">admin</Link></li>
             </ul>
             <div className="dropdown d-none d-lg-block">
               <button className="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i className="fas fa-search text-warning"></i></button>

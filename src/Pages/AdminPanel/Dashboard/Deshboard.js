@@ -1,8 +1,13 @@
 import React from 'react';
-
+import {
+    Link
+     
+   } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 const Deshboard = () => {
+    const {user,logOut} = useAuth();
     return (
-        <div>
+        <div className="my-8">
 
            
 <div id="wrapper">
@@ -14,7 +19,7 @@ const Deshboard = () => {
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3">Admin Dashboard <sup>2</sup></div>
         </a>
 
        
@@ -31,53 +36,11 @@ const Deshboard = () => {
         <hr class="sidebar-divider"/>
 
        
-        <div class="sidebar-heading">
-            Interface
-        </div>
+        
+        
 
       
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>Components</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Components:</h6>
-                    <a class="collapse-item" href="buttons.html">Buttons</a>
-                    <a class="collapse-item" href="cards.html">Cards</a>
-                </div>
-            </div>
-        </li>
-
-  
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>Utilities</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Utilities:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Colors</a>
-                    <a class="collapse-item" href="utilities-border.html">Borders</a>
-                    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a class="collapse-item" href="utilities-other.html">Other</a>
-                </div>
-            </div>
-        </li>
-
-    
-        <hr class="sidebar-divider"/>
-
-      
-        <div class="sidebar-heading">
-            Addons
-        </div>
-
+       
      
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -88,13 +51,11 @@ const Deshboard = () => {
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="login.html">Login</a>
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <Link  class="collapse-item" to="/addServices">Add Service</Link>
+                    <Link class="collapse-item" href="#">Manage Services</Link>
+                    <Link class="collapse-item" href="#">Show Order</Link>
                     <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Other Pages:</h6>
-                    <a class="collapse-item" href="404.html">404 Page</a>
-                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                   
                 </div>
             </div>
         </li>
@@ -107,12 +68,7 @@ const Deshboard = () => {
         </li>
 
       
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
-
+        
       
         <hr class="sidebar-divider d-none d-md-block"/>
 
@@ -122,12 +78,7 @@ const Deshboard = () => {
         </div>
 
        
-        <div class="sidebar-card d-none d-lg-flex">
-            <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..."/>
-            <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-            <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-        </div>
-
+        
     </ul>
     
     <div id="content-wrapper" class="d-flex flex-column">
@@ -249,7 +200,7 @@ const Deshboard = () => {
                             </h6>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                    <img class="rounded-circle" src="assets_admin/img/undraw_profile_1.svg"
                                         alt="..."/>
                                     <div class="status-indicator bg-success"></div>
                                 </div>
@@ -261,7 +212,7 @@ const Deshboard = () => {
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                    <img class="rounded-circle" src="assets_admin/img/undraw_profile_2.svg"
                                         alt="..."/>
                                     <div class="status-indicator"></div>
                                 </div>
@@ -273,7 +224,7 @@ const Deshboard = () => {
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                    <img class="rounded-circle" src="assets_admin/img/undraw_profile_3.svg"
                                         alt="..."/>
                                     <div class="status-indicator bg-warning"></div>
                                 </div>
@@ -307,7 +258,7 @@ const Deshboard = () => {
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                             <img class="img-profile rounded-circle"
-                                src="img/undraw_profile.svg"/>
+                                src="assets_admin/img/undraw_profile.svg"/>
                         </a>
                         
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -325,10 +276,14 @@ const Deshboard = () => {
                                 Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            {user?.email?
+              <button onClick={logOut} className="btn btn-warning ">Logout</button>:
+              <Link className="btn btn-primary order-1 order-lg-0 ms-lg-3" to="/login">Login</Link>}
+              Signed in as: <Link className=" btn btn-secondary " to="/login">{user?.displayName}</Link>
+                            {/* <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
-                            </a>
+                            </a> */}
                         </div>
                     </li>
 
@@ -340,11 +295,7 @@ const Deshboard = () => {
             <div class="container-fluid">
 
                
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                </div>
+               
 
                 
                 <div class="row">
@@ -525,7 +476,7 @@ const Deshboard = () => {
                                 <h4 class="small font-weight-bold">Server Migration <span
                                         class="float-right">20%</span></h4>
                                 <div class="progress mb-4">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                    <div class="progress-bar bg-danger" role="progressbar" style={{width: '20%' }}
                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <h4 class="small font-weight-bold">Sales Tracking <span
@@ -543,7 +494,7 @@ const Deshboard = () => {
                                 <h4 class="small font-weight-bold">Payout Details <span
                                         class="float-right">80%</span></h4>
                                 <div class="progress mb-4">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                    <div class="progress-bar bg-info" role="progressbar" style={{width: '80%'}}
                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <h4 class="small font-weight-bold">Account Setup <span
@@ -556,75 +507,7 @@ const Deshboard = () => {
                         </div>
 
                         
-                        <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-primary text-white shadow">
-                                    <div class="card-body">
-                                        Primary
-                                        <div class="text-white-50 small">#4e73df</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-success text-white shadow">
-                                    <div class="card-body">
-                                        Success
-                                        <div class="text-white-50 small">#1cc88a</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-info text-white shadow">
-                                    <div class="card-body">
-                                        Info
-                                        <div class="text-white-50 small">#36b9cc</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-warning text-white shadow">
-                                    <div class="card-body">
-                                        Warning
-                                        <div class="text-white-50 small">#f6c23e</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-danger text-white shadow">
-                                    <div class="card-body">
-                                        Danger
-                                        <div class="text-white-50 small">#e74a3b</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-secondary text-white shadow">
-                                    <div class="card-body">
-                                        Secondary
-                                        <div class="text-white-50 small">#858796</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-light text-black shadow">
-                                    <div class="card-body">
-                                        Light
-                                        <div class="text-black-50 small">#f8f9fc</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="card bg-dark text-white shadow">
-                                    <div class="card-body">
-                                        Dark
-                                        <div class="text-white-50 small">#5a5c69</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                      
                     <div class="col-lg-6 mb-4">
 
                        
@@ -635,7 +518,7 @@ const Deshboard = () => {
                             <div class="card-body">
                                 <div class="text-center">
                                     <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}}
-                                        src="img/undraw_posting_photo.svg" alt="..."/>
+                                        src="assets_admin/img/undraw_posting_photo.svg" alt="..."/>
                                 </div>
                                 <p>Add some quality, svg illustrations to your project courtesy of <a
                                         target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
@@ -672,7 +555,7 @@ const Deshboard = () => {
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2021</span>
+                    <span>Copyright &copy; Shop to Door Reserved@21</span>
                 </div>
             </div>
         </footer>
@@ -709,7 +592,7 @@ const Deshboard = () => {
     </div>
 
 </div>
-
+</div>
 
         </div>
     );
